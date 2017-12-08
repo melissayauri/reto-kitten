@@ -5,25 +5,47 @@
 }
 .box{
   /*outline: 1px solid red;*/
-  width: 50%;
-  height: 30%;
-  position:relative;
-  top: 60%;
-  left: 40%;
+
 }
 .cat{
   background-image: url(../assets/images/kitten-medium.png);
   background-repeat: no-repeat;
   background-position: center;
+  width: 50%;
+  height: 30%;
+  position:relative;
+  top: 60%;
+  left: 40%;
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
    .background {
+     outline: 1px solid red;
     background-image: url(../assets/images/dawn.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+
   }
   .cat{
-    
+    background-image: url(../assets/images/kitten-large.png);
+    height: 50%;
+    width: 100%;
+    left: 0%;
+    top: 50%;
   }
   }
+
+  @media (max-width: 500px) {
+     .background {
+      background-image: url(../assets/images/night.jpg);
+      background-repeat: no-repeat;
+      height: 700px;
+    }
+    .cat{
+      background-image: url(../assets/images/kitten-large.png);
+
+    }
+    }
