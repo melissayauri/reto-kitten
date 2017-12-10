@@ -1,52 +1,106 @@
-.background{
-  background-image: url(../assets/images/sunny-day.jpg);
-  height: 900px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*estilos al encabezado*/
+.head{
+  /*color*/
+  background-color: #00ced1;
+  /*posicionamiento principal*/
+  position: fixed;
+  /*ancho*/
   width: 100%;
+  /*texto centrado y color*/
+  text-align: center;
+  color: white;
 }
-.box{
-  /*outline: 1px solid red;*/
-
+/*estilos a la seccion footer*/
+footer{
+  background-color: #00ced1;
+  text-align: center;
 }
+/*estilos para la imagen grande*/
+/*estilos a la imagen paisaje */
+.background{
+  /*paisaje de fondo*/
+  background-image: url(../assets/images/sunny-day.jpg);
+  /*la imagen no se repite*/
+  background-repeat: no-repeat;
+  /*la imagen toma el tamaño de su contenedor*/
+  background-size: cover;
+  /*alto*/
+  height: 800px;
+}
+/*estilos a la imagen gato*/
 .cat{
+  /*outline: 1px solid red;*/
+  /*imagen del gato mediano*/
   background-image: url(../assets/images/kitten-medium.png);
   background-repeat: no-repeat;
-  background-position: center;
-  width: 50%;
-  height: 30%;
-  position:relative;
-  top: 60%;
-  left: 40%;
-
+  /*indica que la imagen del gato ocupe el 100% en ancho y alto del contenedor*/
+  background-size: 100% 100%;
+  /*tamaño del contenedor*/
+  width: 40%;
+  height: 40%;
+  /*posicionamiento del contenedor de la imagen gato*/
+  position: relative;
+  /*eje de coordenadas para centrar el contenedor*/
+  top: 50%;
+  left: 25%;
 }
-
-@media (max-width: 900px) {
-   .background {
-     outline: 1px solid red;
-    background-image: url(../assets/images/dawn.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 700px;
-
+/*se aplica media queries para realizar los cambios de tamaño de la ventana*/
+/*cambios para la imagen mediana*/
+@media (max-width:900px) {
+  /*paisaje de fondo-noche*/
+  .background {
+    /*incorporando paisaje de noche*/
+    background-image: url(../assets/images/night.jpg);
+    /*cambiando el alto*/
+    height: 900px;
   }
+  /*cambiando estilos para la imagen gato */
+  .cat{
+    /*cambiando imagen gato-pequeño*/
+    background-image: url(../assets/images/kitten-small.png);
+    /*modificando el alto*/
+    height: 30%;
+    /*ubicando a la imagen más abajo porque se modifico el alto*/
+    top:70%;
+    left: 35%;
+  }
+  /*cambiando color del encabezado y pie de pagina*/
+  .head{
+    background-color: #a9a9a9;
+  }
+  footer{
+      background-color: #a9a9a9;
+  }
+}
+/*cambios para la imagen pequeña*/
+@media (max-width: 800px) {
+  /*imagen de fondo-amanecer*/
+  .background {
+    background-image: url(../assets/images/dawn.png);
+    /*cambiando altura*/
+    height: 600px;
+    /*la imagen abarca todo su contenedor*/
+    background-size: 100% 100%;
+  }
+  /*imagen gato-largo*/
   .cat{
     background-image: url(../assets/images/kitten-large.png);
-    height: 50%;
-    width: 100%;
-    left: 0%;
-    top: 50%;
+    /*ancho y alto del contenedor*/
+    width: 80%;
+    height: 45%;
+    /*cambiando el eje de coordenadas para centrar*/
+    top:55%;
+    left: 15%;
   }
+  .head{
+    background-color: #9932cc;
   }
-
-  @media (max-width: 800px) {
-     .background {
-      background-image: url(../assets/images/night.jpg);
-      background-repeat: no-repeat;
-      height: 1000px;
-    }
-    .cat{
-      background-image: url(../assets/images/kitten-small.png);
-
-
-    }
-    }
+  footer{
+    background-color: #9932cc;
+  }
+}
