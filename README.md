@@ -3,7 +3,7 @@
 ***
 ## Objetivo
 Crear una página web donde se muestre un paisaje y un gatito diferente a medida que la ventana del navegador se haga más pequeña.Los tamaños son de la siguiente forma:
-
+## layaout
 * Tamaño grande
 
 ![Tamaño grande](assets/images/grande.JPG)
